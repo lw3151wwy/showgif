@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="#FDF7E8"
+    android:layout_height="fill_parent">
+	
+    
+    <include
+        android:id="@+id/picedit_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/topbar" />
+    
+    <RelativeLayout 
+        android:id="@+id/prosessingLayout"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center|center_horizontal"
+        android:layout_below="@id/picedit_topbar"
+        android:background="@drawable/picshare_bg"
+        >
+        
+	    <TextView
+	        android:id="@+id/picedit_joke"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textColor="@color/black" 
+            android:gravity="center"
+            android:textSize="24sp"
+            />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/progress_layout"
+        android:layout_below="@id/picedit_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible"
+        android:gravity="bottom|center_horizontal"
+        >
+        
+        <ProgressBar
+            android:id="@+id/loading_bar_bot"
+            android:layout_width="40dip"
+            android:layout_height="40dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:textColor="@color/black"
+            android:text="@string/loading_str"
+            android:typeface="serif"
+            android:textSize="24sp" />
+    </RelativeLayout>
+    
+    
+	<!--  
+	<RelativeLayout
+	    android:id="@+id/editpic_botbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical" 
+        android:orientation="horizontal">
+        
+        <Button
+            android:id="@+id/addword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbar_btn_right_selector"
+            android:layout_marginLeft="20dp"
+            android:text="添字"
+            android:textColor="@color/abs_white"
+            android:textSize="16sp" />
+  
+        <Button
+	        android:id="@+id/finish_edittxt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/addword"
+            android:background="@drawable/topbar_btn_right_selector"
+	        android:text="完成"
+	         android:textColor="@color/abs_white"
+            android:textSize="16sp" />
+       
+       
+         <Button
+            android:id="@+id/editgif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbar_btn_right_selector"
+            android:layout_toRightOf="@id/finish_edittxt"
+            android:text="编辑"
+            android:textColor="@color/abs_white"
+            android:textSize="16sp" />
+        
+         <Button
+            android:id="@+id/showgif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/editgif"
+            android:background="@drawable/topbar_btn_right_selector"
+            android:text="开秀"
+            android:textColor="@color/abs_white"
+            android:textSize="16sp" />
+      
+    </RelativeLayout>
+    -->
+    
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_below="@id/picedit_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/blue_bg_320"
+        android:scaleType="fitXY"
+       />
+    
+    <LinearLayout  
+        android:layout_below="@id/picedit_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"  
+        android:weightSum="510" >  
+  
+        <ImageView
+            android:id="@+id/edit_head"
+            android:layout_width="fill_parent"
+            android:layout_weight="234"  
+            android:layout_height="wrap_content"  
+            />  
+        <com.showgif.gifview.GifView  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content" 
+            android:layout_weight="276"/>  
+    </LinearLayout> 
+    
+    <LinearLayout  
+        android:layout_below="@id/picedit_topbar" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"  
+        android:orientation="vertical"  
+        android:weightSum="510" >  
+  
+        <com.showgif.gifview.GifView  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:layout_weight="144"/>  
+        <com.showgif.gifview.GifView
+            android:id="@+id/edit_body"
+            android:layout_width="fill_parent"
+            android:layout_weight="366"  
+            android:layout_height="wrap_content" 
+            />  
+    </LinearLayout> 
+    
+    <Button 
+        android:id="@+id/pic_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wenhao2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/picedit_topbar"
+        />
+	
+	<EditText
+	    android:id="@+id/picedit_et"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="写点什么..." 
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+       	android:layout_centerHorizontal="true"
+        android:textColor="@color/editpic_edittext1"
+       	android:layout_marginBottom="20dp"
+       	android:singleLine="true"
+       	android:textSize="30sp"
+       	android:background="@android:color/transparent"
+	/>
+ 
+    <com.showgif.gif.widget.MyImageView
+        android:id="@+id/ts"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:scaleType="matrix"
+        android:layout_below="@id/picedit_topbar" 
+        android:visibility="invisible"
+       />
+
+    <RelativeLayout
+        android:id= "@+id/layout_gifview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/picedit_topbar" 
+    	android:visibility="invisible">
+
+        <com.showgif.gifview.GifView
+            android:id="@+id/gifview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/pic_help"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/picedit_topbar"
+        android:visibility="invisible"
+        android:background="@drawable/help"
+        android:scaleType="fitXY"/>
+</RelativeLayout>

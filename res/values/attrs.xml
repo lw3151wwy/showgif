@@ -1,0 +1,5 @@
+<resources >
+    <declare-styleable name="MyGifView">
+        <attr name="src" format="integer"/>
+    </declare-styleable>
+</resources>
