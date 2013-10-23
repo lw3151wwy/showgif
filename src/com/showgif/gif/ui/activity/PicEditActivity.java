@@ -155,6 +155,7 @@ public class PicEditActivity extends Activity implements OnClickListener {
 		mmAPI.registerApp("wxbd56405fa9634bc6");
 
 		gifHead = (ImageView) findViewById(R.id.edit_head);
+		
 		gifBody = (GifView) findViewById(R.id.edit_body);
 		gifHead.setImageBitmap(Util.getImageFromAssetFile(this, "gif",
 				"v1_head1.gif"));
@@ -170,21 +171,16 @@ public class PicEditActivity extends Activity implements OnClickListener {
 		gifBody.setLoopAnimation();
 		wordDialog = new Word(this, handler);
 		prosessingLayout = (RelativeLayout) findViewById(R.id.prosessingLayout);
-
 		initButton();
 		initData();
 	}
 
 	private OnTouchListener etTouch = new OnTouchListener() {
-
 		int[] temp = new int[] { 0, 0 };
-
 		public boolean onTouch(View v, MotionEvent event) {
 			int eventaction = event.getAction();
-
 			Log.i(" ", "onTouchEvent:" + eventaction);
 			int x = (int) event.getRawX();
-
 			int y = (int) event.getRawY();
 
 			switch (eventaction) {
@@ -214,7 +210,6 @@ public class PicEditActivity extends Activity implements OnClickListener {
 	private void initButton() {
 
 		// ts = (MyImageView) this.findViewById(R.id.ts);
-
 		progressBar = (RelativeLayout) findViewById(R.id.progress_layout);
 
 		ivImage = (ImageView) this.findViewById(R.id.pic_help);
@@ -274,7 +269,6 @@ public class PicEditActivity extends Activity implements OnClickListener {
 		topbar_btnRight = (Button) findViewById(R.id.topbar_btn_right);
 		topbar_btnRight.setVisibility(View.VISIBLE);
 		topbar_btnRight.setOnClickListener(this);
-
 		// ³õÊ¼»¯¾²Ì¬Í¼Æ¬ºÍGIFÍ¼Æ¬£¬
 		myImageView = (ImageView) findViewById(R.id.imageview);
 		myImageView.setOnTouchListener(new OnTouchListener() {
@@ -373,7 +367,6 @@ public class PicEditActivity extends Activity implements OnClickListener {
 
 			Log.i("123", "onTouchEvent:" + eventaction);
 			int x = (int) event.getRawX();
-
 			int y = (int) event.getRawY();
 
 			switch (eventaction) {
@@ -398,7 +391,6 @@ public class PicEditActivity extends Activity implements OnClickListener {
 
 	private void initShakeLisener() {
 		mShakeListener = new ShakeListener(this);
-
 		mShakeListener.setOnShakeListener(new OnShakeListener() {
 
 			public void onShake() {

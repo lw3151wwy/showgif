@@ -215,8 +215,8 @@ containing a value of this type.
         public static final int btn_close_guide=0x7f0b000c;
         public static final int content_list=0x7f0b0000;
         public static final int dialog_layout=0x7f0b0003;
-        public static final int edit_body=0x7f0b0015;
-        public static final int edit_head=0x7f0b0014;
+        public static final int edit_body=0x7f0b0016;
+        public static final int edit_head=0x7f0b0015;
         public static final int first_play=0x7f0b000d;
         public static final int gifview=0x7f0b001a;
         public static final int guidePages=0x7f0b0009;
@@ -226,9 +226,9 @@ containing a value of this type.
         public static final int linearLayout1=0x7f0b0008;
         public static final int linearLayout2=0x7f0b000a;
         public static final int loading_bar_bot=0x7f0b0012;
-        public static final int pic_button=0x7f0b0016;
+        public static final int pic_button=0x7f0b0017;
         public static final int pic_help=0x7f0b001b;
-        public static final int picedit_et=0x7f0b0017;
+        public static final int picedit_et=0x7f0b0014;
         public static final int picedit_helptop=0x7f0b0024;
         public static final int picedit_joke=0x7f0b0010;
         public static final int picedit_topbar=0x7f0b000e;

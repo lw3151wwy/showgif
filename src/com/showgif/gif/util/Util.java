@@ -280,7 +280,6 @@ public class Util {
 			Log.v("123",foldName + File.separator + fileName);
 			 is = am.open(foldName + File.separator + fileName);
 			 image = BitmapFactory.decodeStream(is);
-			 
 //           ByteArrayOutputStream baos = new ByteArrayOutputStream();
 //           BufferedOutputStream bos = new BufferedOutputStream(baos, 8000);
 //           //copy(bis, bos);
